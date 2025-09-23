@@ -1,0 +1,33 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    flex-direction: column;
+    gap: 10px;    
+    background-color: #d0d0f8;
+}
+form, #resultado{
+    display:flex;
+    width:60vw;
+    margin: auto;
+    padding:24px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #080893;
+    border-radius:25px;
+    flex-direction: column;
+    gap:20px;
+    background-color: aliceblue;
+}
+ 
+h1{
+    color:#080893;
+}
+
+input {
+    width: 500px;
+}
