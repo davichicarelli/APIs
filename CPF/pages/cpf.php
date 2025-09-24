@@ -19,6 +19,7 @@ if (!$cpf || strlen($cpf) != 11) {
 
     if ($response === false) {
         $mensagem = "<p style='color:red;'>Erro ao acessar a API de CPF!</p>";
+        
     } else {
         $dados = json_decode($response, true);
 
@@ -44,4 +45,4 @@ if (!$cpf || strlen($cpf) != 11) {
 <body>
   <?= $mensagem ?>
 </body>
-</html>
+</html> 

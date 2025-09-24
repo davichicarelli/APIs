@@ -24,7 +24,7 @@ if (isset($cep) == false || strlen($cep) != 8) {
     $dados = json_decode($response, true);
     // json_decode() é uma função do PHP que transforma uma string no formato JSON em um array associativo.
 
-    if (isset($dados['erro']) == true) {
+    if (isset($dados['error']) == true) {
       $mensagem = "<h2>CEP não encontrado!</h2><br>";
      } else {
        $mensagem = "<h1>CEP encontrado!</h1><br>";
@@ -49,8 +49,8 @@ if (isset($cep) == false || strlen($cep) != 8) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./../css/style.css">
   <title>Consulta de CEP</title>
+  <link rel="stylesheet" href="./../css/style.css">
 </head>
 <body>
   <div id="cep-buscado">
@@ -77,7 +77,7 @@ if (isset($cep) == false || strlen($cep) != 8) {
 
     <div><br>
     <p>Estado:</p>
-    <input type="text" value="<?= isset($dados['estado']) ? $dados ['estado'] : ''?>" disabled>
+    <input type="text" value="<?= isset($dados['estado']) ? $dados ['estado']: ''?>" disabled>
     </div>
   </div>
 </body>
