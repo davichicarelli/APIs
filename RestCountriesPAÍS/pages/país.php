@@ -98,7 +98,8 @@ if ($pais) {
     <div><br>
     <p>Comumente:</p>
     <input class="input2" type="text" value="<?= $comumente ?>" disabled>
-    </div>    
+    </div>
+    <br><a href="./../index.html">🔙 Voltar</a>
 </div>
 </body>
 </html>

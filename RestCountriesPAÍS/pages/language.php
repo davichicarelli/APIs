@@ -1,8 +1,10 @@
 <?php
 $mensagem = "";
+$paises = [];
 $idioma = filter_input(INPUT_GET, 'idioma', FILTER_SANITIZE_SPECIAL_CHARS);
 
 if ($idioma) {
+    // Endpoint correto para pegar países por idioma
     $url = "https://restcountries.com/v3.1/name/" . rawurlencode($idioma);
 
     $options = [
@@ -17,19 +19,19 @@ if ($idioma) {
 
     if ($response === false) {
         $mensagem = "<h1>Erro ao acessar a API Rest Countries!</h1>";
-
     } else {
-
         $data = json_decode($response, true);
 
-        if (isset($data[0])) {
-            $nome = $data[0]['name']['common'] ?? 'N/A';
-            $language = isset($data[0]['languages']) ? implode(", ", array_values($data[0]['languages'])) : 'N/A';
-
+        if (is_array($data) && count($data) > 0) {
+            foreach ($data as $pais) {
+                $paises[] = $pais['name']['common'] ?? 'N/A';
+            }
         } else {
-            $mensagem = "<h1>Idioma não encontrado.</h1>";
+            $mensagem = "<h1>Nenhum país encontrado para esse idioma.</h1>";
         }
     }
+} else {
+    $mensagem = "<h1>Nenhum idioma selecionado.</h1>";
 }
 ?>
 <!DOCTYPE html>
@@ -37,21 +39,25 @@ if ($idioma) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informações dos Países</title>
+    <title>Países por Idioma</title>
     <link rel="stylesheet" href="./../css/style.css">
 </head>
 <body>
-    <div id="idioma-buscado">
-        <div><br>
-            <p>Nome do País:</p>
-            <input class="input2" type="text" value="<?= $nome ?>" disabled>
-        </div>
+    <div id="resultado">
+        <h1>Países que falam esse idioma:</h1><br>
+        <?php if (!empty($paises)): ?>
+            <ul>
+                <?php foreach ($paises as $pais): ?>
+                    <div><br>
+                    <input  class="input2" type="text" value="<?= $pais ?>" disabled>
+                    </div>
+                    <?php endforeach; ?>
+            </ul>
+        <?php else: ?>
+            <?= $mensagem ?>
+        <?php endif; ?>
 
-        <div><br>
-            <p>Idioma(s):</p>
-            <input class="input3" type="text" value="<?= $language ?>" disabled>
-        </div>
-        <?= $mensagem ?>
+        <br><a href="./../index.html">🔙 Voltar</a>
     </div>
 </body>
 </html>
