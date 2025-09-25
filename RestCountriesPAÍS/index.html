@@ -8,10 +8,11 @@
 </head>
 <body>
   <h1>Consulta de Países</h1>
-  <form action="./pages/país.php" method="get">
+  <form class="form1" action="./pages/país.php" method="get">
+    <div>
     <h2>Escolha um País:</h2>
     <select id="pais" name="pais" required>
-      <option value="" disabled selected> Selecione um país </option>
+      <option value="" disabled selected> Selecione um País </option>
 
       <optgroup label="A">
         <option value="Afeganistão">Afeganistão</option>
@@ -277,6 +278,210 @@
       </optgroup>
     </select>
         <input class="input1" type="submit" value="Consultar">
-  </form>
+      </div>
+</form>
+<form class="form2" action="./pages/language.php" method="get">
+  <div>
+    <h2>Escolha um Idioma:</h2>
+    <select id="idioma" name="idioma" required>
+      <option value="" disabled selected> Selecione um idioma </option>
+
+      <optgroup label="A">
+        <option value="South Africa">Africâner</option>
+        <option value="Albania">Albanês</option>
+        <option value="Germany">Alemão</option>
+        <option value="Ethiopia">Amárico</option>
+        <option value="Saudi Arabia">Árabe</option>
+        <option value="Armenia">Armênio</option>
+        <option value="India">Assamês</option>
+        <option value="Azerbaijan">Azeri</option>
+      </optgroup>
+
+      <optgroup label="B">
+        <option value="Mali">Bambara</option>
+        <option value="Spain">Basco</option>
+        <option value="Bangladesh">Bengali</option>
+        <option value="Belarus">Bielorrusso</option>
+        <option value="Myanmar">Birmanês</option>
+        <option value="Bosnia and Herzegovina">Bósnio</option>
+        <option value="Bulgaria">Búlgaro</option>
+      </optgroup>
+
+      <optgroup label="C">
+        <option value="Spain">Catalão</option>
+        <option value="Kazakhstan">Cazaque</option>
+        <option value="China">Chinês (Mandarim)</option>
+        <option value="Hong Kong">Chinês (Cantonês)</option>
+        <option value="Croatia">Croata</option>
+        <option value="Iraq">Curdo</option>
+        <option value="Czech Republic">Checo</option>
+      </optgroup>
+
+      <optgroup label="D">
+        <option value="Denmark">Dinamarquês</option>
+        <option value="Maldives">Divehi</option>
+        <option value="Bhutan">Dzongkha</option>
+      </optgroup>
+
+      <optgroup label="E">
+        <option value="Slovakia">Eslovaco</option>
+        <option value="Slovenia">Esloveno</option>
+        <option value="Esperanto">Esperanto</option>
+        <option value="Estonia">Estoniano</option>
+        <option value="Togo">Ewe</option>
+        <option value="Spain">Espanhol</option>
+      </optgroup>
+
+      <optgroup label="F">
+        <option value="Iran">Farsi (Persa)</option>
+        <option value="Philippines">Filipino</option>
+        <option value="Finland">Finlandês</option>
+        <option value="France">Francês</option>
+        <option value="Senegal">Fula</option>
+      </optgroup>
+
+      <optgroup label="G">
+        <option value="Ireland">Gaélico Irlandês</option>
+        <option value="United Kingdom">Gaélico Escocês</option>
+        <option value="United Kingdom">Galês</option>
+        <option value="Georgia">Georgiano</option>
+        <option value="Greece">Grego</option>
+        <option value="Paraguay">Guarani</option>
+        <option value="India">Gujarati</option>
+      </optgroup>
+
+      <optgroup label="H">
+        <option value="Haiti">Haitiano (Crioulo)</option>
+        <option value="Nigeria">Hauçá</option>
+        <option value="Israel">Hebraico</option>
+        <option value="India">Hindi</option>
+        <option value="China">Hmong</option>
+        <option value="Hungary">Húngaro</option>
+      </optgroup>
+
+      <optgroup label="I">
+        <option value="Nigeria">Igbo</option>
+        <option value="Indonesia">Indonésio</option>
+        <option value="United Kingdom">Inglês</option>
+        <option value="Canada">Inuktitut</option>
+        <option value="Italy">Italiano</option>
+      </optgroup>
+
+      <optgroup label="J">
+        <option value="Japan">Japonês</option>
+        <option value="Indonesia">Javanês</option>
+      </optgroup>
+
+      <optgroup label="K">
+        <option value="India">Kannada</option>
+        <option value="Cambodia">Khmer</option>
+        <option value="Rwanda">Kinyarwanda</option>
+        <option value="Kyrgyzstan">Kirguiz</option>
+        <option value="South Korea">Coreano</option>
+        <option value="Cape Verde">Crioulo Cabo-Verdiano</option>
+      </optgroup>
+
+      <optgroup label="L">
+        <option value="Laos">Laociano</option>
+        <option value="Vatican City">Latim</option>
+        <option value="Latvia">Letão</option>
+        <option value="Lithuania">Lituano</option>
+        <option value="Uganda">Luganda</option>
+      </optgroup>
+
+      <optgroup label="M">
+        <option value="North Macedonia">Macedônio</option>
+        <option value="India">Malaiala</option>
+        <option value="Malaysia">Malaio</option>
+        <option value="Malta">Maltês</option>
+        <option value="Gambia">Mandinga</option>
+        <option value="New Zealand">Maori</option>
+        <option value="India">Marata</option>
+        <option value="Mongolia">Mongol</option>
+      </optgroup>
+
+      <optgroup label="N">
+        <option value="Nepal">Nepalês</option>
+        <option value="Norway">Norueguês Bokmål</option>
+        <option value="Norway">Norueguês Nynorsk</option>
+        <option value="South Africa">Ndebele</option>
+      </optgroup>
+
+      <optgroup label="O">
+        <option value="Ethiopia">Oromo</option>
+      </optgroup>
+
+      <optgroup label="P">
+        <option value="Afghanistan">Pashto</option>
+        <option value="Poland">Polonês</option>
+        <option value="Brazil">Português</option>
+        <option value="Pakistan">Pushto</option>
+      </optgroup>
+
+      <optgroup label="Q">
+        <option value="Peru">Quechua</option>
+      </optgroup>
+
+      <optgroup label="R">
+        <option value="Romania">Romeno</option>
+        <option value="Russia">Russo</option>
+      </optgroup>
+
+      <optgroup label="S">
+        <option value="Samoa">Samoano</option>
+        <option value="India">Sânscrito</option>
+        <option value="Serbia">Sérvio</option>
+        <option value="Lesotho">Sesotho</option>
+        <option value="Zimbabwe">Shona</option>
+        <option value="China">Sichuan Yi</option>
+        <option value="Pakistan">Sindhi</option>
+        <option value="Sri Lanka">Sinhala</option>
+        <option value="Somalia">Somali</option>
+        <option value="South Africa">Sotho do Sul</option>
+        <option value="Kenya">Suaíli</option>
+        <option value="Sweden">Sueco</option>
+      </optgroup>
+
+      <optgroup label="T">
+        <option value="Tajikistan">Tadjique</option>
+        <option value="Thailand">Tailandês</option>
+        <option value="India">Tâmil</option>
+        <option value="Russia">Tatar</option>
+        <option value="India">Telugu</option>
+        <option value="China">Tibetano</option>
+        <option value="Eritrea">Tigrínia</option>
+        <option value="Mozambique">Tsonga</option>
+        <option value="Botswana">Tswana</option>
+        <option value="Turkey">Turco</option>
+        <option value="Turkmenistan">Turcomeno</option>
+      </optgroup>
+
+      <optgroup label="U">
+        <option value="Ukraine">Ucraniano</option>
+        <option value="Pakistan">Urdu</option>
+        <option value="Uzbekistan">Usbeque</option>
+      </optgroup>
+
+      <optgroup label="V">
+        <option value="Vietnam">Vietnamita</option>
+        <option value="South Africa">Venda</option>
+      </optgroup>
+
+      <optgroup label="X">
+        <option value="South Africa">Xhosa</option>
+      </optgroup>
+
+      <optgroup label="Y">
+        <option value="Nigeria">Yorubá</option>
+      </optgroup>
+
+      <optgroup label="Z">
+        <option value="China">Zhuang</option>
+        <option value="South Africa">Zulu</option>
+      </optgroup>
+    </select>
+    <input class="input1" type="submit" value="Consultar">
+  </div>
+</form>
 </body>
 </html>

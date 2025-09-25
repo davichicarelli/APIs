@@ -3,12 +3,12 @@ $mensagem = "";
 $pais = filter_input(INPUT_GET, 'pais', FILTER_SANITIZE_SPECIAL_CHARS);
 
 if ($pais) {
-    $url = "https://restcountries.com/v3.1/translation/" . urlencode($pais);
+    $url = "https://restcountries.com/v3.1/translation/" . rawurlencode($pais);
 
     $options = [
-        "https" => [
+        "http" => [
             "method" => "GET",
-            "header" => "Contente-Type: application/json"
+            "header" => "Content-Type: application/json"
         ]
     ];
 
@@ -16,7 +16,8 @@ if ($pais) {
     $response = file_get_contents($url, false, $context);
 
     if ($response === false) {
-        $mensagem = "Erro ao acessar a API via CEP!";
+        $mensagem = "<h1>Erro ao acessar a API Rest Countries!</h1>";
+
     } else {
 
         $data = json_decode($response, true);

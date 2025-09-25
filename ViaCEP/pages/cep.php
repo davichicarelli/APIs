@@ -26,58 +26,60 @@ if (isset($cep) == false || strlen($cep) != 8) {
 
     if (isset($dados['error']) == true) {
       $mensagem = "<h2>CEP não encontrado!</h2><br>";
-     } else {
-       $mensagem = "<h1>CEP encontrado!</h1><br>";
-    // <h1>CEP encontrado!</h1><br>
-    // <p>Endereço:</p>
-    // <input type='text' value='{$dados['logradouro']}' disabled><br>
-    // <p>Número e Complemento:</p>
-    // <input type='text' value='{$dados['complemento']}'><br>
-    // <p>Bairro:</p>
-    // <input type='text' value='{$dados['bairro']}' disabled><br>
-    // <p>Cidade:</p>
-    // <input type='text' value='{$dados['localidade']}' disabled><br>
-    // <p>Estado:</p>
-    // <input type='text' value='{$dados['estado']}' disabled><br>
-    // ";
+    } else {
+      $mensagem = "<h1>CEP encontrado!</h1><br>";
+      // <h1>CEP encontrado!</h1><br>
+      // <p>Endereço:</p>
+      // <input type='text' value='{$dados['logradouro']}' disabled><br>
+      // <p>Número e Complemento:</p>
+      // <input type='text' value='{$dados['complemento']}'><br>
+      // <p>Bairro:</p>
+      // <input type='text' value='{$dados['bairro']}' disabled><br>
+      // <p>Cidade:</p>
+      // <input type='text' value='{$dados['localidade']}' disabled><br>
+      // <p>Estado:</p>
+      // <input type='text' value='{$dados['estado']}' disabled><br>
+      // ";
     }
   }
 }
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Consulta de CEP</title>
   <link rel="stylesheet" href="./../css/style.css">
 </head>
+
 <body>
   <div id="cep-buscado">
     <span id="error"> <?= $mensagem ?></span>
-  <div>
-     <p>Endereço:</p>
-     <input type="text" value="<?= isset($dados['logradouro']) ? $dados ['logradouro'] : ''?>" disabled>
-     </div>
-
-     <div><br>
-     <p>Número e Complemento:</p>
-     <input type="text" value="<?= isset($dados['complemento']) ? $dados ['complemento'] : ''?>" disabled>
-     </div>
-
-     <div><br>
-     <p>Bairro:</p>
-     <input type="text" value="<?= isset($dados['bairro']) ? $dados ['bairro'] : ''?>" disabled>
-     </div>
-
-     <div><br>
-    <p>Cidade:</p>
-    <input type="text" value="<?= isset($dados['localidade']) ? $dados ['localidade'] : ''?>" disabled>
+    <div>
+      <p>Endereço:</p>
+      <input type="text" value="<?= isset($dados['logradouro']) ? $dados['logradouro'] : '' ?>" disabled>
     </div>
 
     <div><br>
-    <p>Estado:</p>
-    <input type="text" value="<?= isset($dados['estado']) ? $dados ['estado']: ''?>" disabled>
+      <p>Número e Complemento:</p>
+      <input type="text" value="<?= isset($dados['complemento']) ? $dados['complemento'] : '' ?>" disabled>
+    </div>
+
+    <div><br>
+      <p>Bairro:</p>
+      <input type="text" value="<?= isset($dados['bairro']) ? $dados['bairro'] : '' ?>" disabled>
+    </div>
+
+    <div><br>
+      <p>Cidade:</p>
+      <input type="text" value="<?= isset($dados['localidade']) ? $dados['localidade'] : '' ?>" disabled>
+    </div>
+
+    <div><br>
+      <p>Estado:</p>
+      <input type="text" value="<?= isset($dados['estado']) ? $dados['estado'] : '' ?>" disabled>
     </div>
   </div>
 </body>
